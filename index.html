@@ -1,119 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+        href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Noto+Serif+JP:wght@200;300&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;1,100&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+        
+            body {
+                font-family: Noto Serif JP, Roboto, pacifico;
+                margin: 0;
+                padding: 0;
+                background-color: whitesmoke;
+                font-size: larger;
+            }
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Me !</title>
+            .wrapper {
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+                background-image: url("foodbg2.jpg");
+                background-size: cover;
+                opacity: 0.7;
+            }
+            a{
+                text-decoration: none;
+                color: black;
+            }
 
-</head>
+            nav {
+                background: rgba(0, 0, 0, 0.1);
+                display: flex;
 
-<body>
-    <center>
+                flex-direction: row;
+            }
 
-        <div class="page" id="page1">
-        <h1>
-            YO !
-        </h1>
+            aside{
+                margin: 5rem 2rem;
+                padding: 1rem  2.5rem;
+            }
+            aside[class='left-main'] {
+                border-right: 6px solid black;
+            }
 
+            section[class='base']{
+                display: flex;
+                justify-content:space-evenly;
+            }
+            .fields{
+                display: flex;
+                flex-direction: column;
+            }
+            input{
+                width: 85%;
+            }
+            .nav-options{
+                display: flex;
+                justify-content: space-around;
+                justify-content: center;
+                list-style: none;
+            }
+            .nav-options >li {
+                margin: 0 1rem;
+                font-family: Roboto;
+            }
+            nav{
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
 
-        <p>
-            peekaboo !. I am Saurabh Mahra.
-        </p>
+            }
+            .social-container{
+                display: flex;
 
-        <p>
-            talking about me, I'am a huge shinchan fan &#x1F601. <br>
-            see this is me &#x1F605
-        </p>
-        <img src="me.jpg" alt="" width=" 300">
-        <br>
-        <br>
-        <hr>
-    </div>
+                justify-content: center;
+                align-items: center;
+            }
+            .social-container > img{
+                width: 2rem;
+                height: 2rem ;
+                border-radius: 1rem;
+                margin: .3rem;
+            }
+            
+            footer{
+                padding: 5rem;
+                background-color: grey;
+                
+            }
+            .bike{
+                display:flex ;
+                flex-direction: row;
 
-    <div class="page" id="page2">
-        <br>
-        <br>
+            }
+            .bike>img{
+                width: 6rem;
+                height: 5rem;
+                /* background: transparent; */
+                animation: drive 4s linear infinite;
+            }
+            
+            @keyframes drive {
+                from{
+                    transform: translateX(-4rem);
+                }
+                to{
+                    transform: translateX(100vw);
+                }
+            }
 
+            @media screen and ( min-width: 0px ) and (max-width: 600px) {
+                .nav-options{
+                    flex-direction: column;
+                }
+                nav{
+                    flex-direction: column;
+                }
+                section[class='base']{
+                flex-direction: column;
+            }
+            }
 
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="base">
+                <nav>
+                    <div class="left nav-item logo-container">
+                        <h4>
+                            FoodStation
+                        </h4>
+                    </div>
+                    <div class="mid nav-item menu-container">
+                        <ul class='nav-options'>
+                            <li>Home</li>
+                            <li>Services</li>
+                            <li>Food Gallery</li>
+                            <li>About Us</li>
+                        </ul>
+                    </div>
+                    <div class="right nav-item social-container">
+                        <img src="facebook.png" alt="">
+                        <img src="twitter.png" alt="">
+                    </div>
+                </nav>
+            </header>
 
-        <p>
-            <strong>  Lets head towards my education :-  </strong><br> <br>
-            I was always 'The' guy of my class, always had false pride of the same, which i regret <br>
-            the most. I ended up scoring 94.83% in 10th standard which gave me an opportunity to  <br>
-            continue my studies in a well reputed boarding school in Indore city. That's where my   <br>
-            IIT journey started. During my JEE days i was damn competitive. I became studious kinda   <br>
-            person, did not enjoyed that time. In short I ruined my school life from there onwards.  <br>
-            I was not focussed toward boards so i could just secure 89.60% in 12th standard. I don't   <br>
-            want to give excuses but my studies weren't enough, so I was not able to get a desired   <br>
-            rank. I decided to try for 1 more year and I NAILED JEE THIS TIME  <br>
-            <br>
+            <div class="bike">
+                <img src="bike5.png" alt="">
+            </div>
+            
+            
+            <section class="base">
+                <aside class="left-main" >
+                    <h2>want a call back? fill out this form</h2>
+                    <form action="">
+                        <div class="fields">
+                            
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="" />
+                            <label for="contact">contact</label>
+                            <input type="number" name="contact" id="" />
+                            
+                        </div>
+                        <button type="submit">
+                            Call Me
+                        </button>
+                    </form>
+                </aside >
+                <aside class="right-main" >
+                    
+                    <h2>
+                        delicious food just few clicks away !
+                        download our app now 
+                    </h2>
+                    <h3>
+                        <a href="#">
+                            download
+                        </a>
+                    </h3>
 
-            presently I am at this heaven. (Though i hate rainy season there)
-            <br>
-            <br>
-            <img src="iitb.jpg" width= "300" alt="">
-            <hr>
+                </aside>
+                
 
-        </p>
+            </section>
 
-        <br>
-        <br>
-        <p>
-            <strong>My Ambitions &#x1F602 :-</strong> 
-            <ul>
-                <li>Win Google's Code Jam</li>
-                <li>Want a job at Google </li>
-                <li>at later age, do professional farming (hell yeah, its damn underrated &#x1F61F)</li>
-                <li>Become an entrepreneur and grab truck load of money &#x1F61C </li>
-            </ul>
-            <br>
-            <br>
-        </p>
-
-        <p>
-            <strong>My Hobbies:-</strong> 
-            <ul>
-                <li>i &#x1F5A4 programming</li>
-                <li>reverse engineer things &#x1F602</li>
-                <li>android geek </li>
-                <li>football (I hate madrid )</li>
-            </ul>
-        </p>
-    </div>
-
-    <div class="page" id="page3">
-        <hr>
-
-
-
-
-        <br><br>
-        <form action="">
-
-            <label for="comments">any comments ? you would like to </label><br>
-            <input type="text" name="" id="comments" size="50"><br><br><br>
-            <label for="chkbx">you prefer 'she' before your name (if yes, it will be replied asap &#x1F61C) :-  </label><br>
-            <input type="checkbox" name="" id="chkbx">
-            <br><br><br>
-            <input type="submit" value="SUBMIT">
-
-
-
-        </form>
-
-
-
-
-
-
-
-
-
-    </div>
-    </center>
-
-    <!-- I DON'T BELIEVE I REQUIRE ANY COMMENTS :) BUT IT WAS ASKED IN THE TASK SO. -->
-</body>
-
-</html>
+            <footer class="aside">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam, necessitatibus impedit in deserunt deleniti vel cupiditate nulla ab hic alias voluptatem odio ut quibusdam. Quaerat eos, quod consectetur voluptate placeat nostrum, est fugiat nam accusamus, debitis doloribus illum excepturi dolores.</p>
+            </footer>
+        </div>
+    </body>
+    </html>
